@@ -1,0 +1,26 @@
+.user-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.user-title {
+  font-size: 30px;
+  margin: 20px 0 10px;
+}
+.user-items {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  border: 2px solid black;
+
+  .thead-td {
+    border-left: 2px solid black;
+    text-transform: capitalize;
+  }
+  .thead-td:first-child {
+    border: 0;
+  }
+}

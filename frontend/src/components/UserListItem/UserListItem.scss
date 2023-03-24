@@ -1,0 +1,18 @@
+.item {
+  display: contents;
+
+  .item-prop {
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    padding: 10px;
+    font-size: 100%;
+
+    .user-link {
+      border-bottom: 2px solid #000;
+      color: black;
+    }
+  }
+  .item-prop:first-child {
+    border-left: 0;
+  }
+}

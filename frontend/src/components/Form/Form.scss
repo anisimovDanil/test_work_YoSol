@@ -1,0 +1,50 @@
+textarea {
+  resize: none !important;
+}
+button {
+  border: none;
+}
+
+.form-wrapper {
+  margin: 30px auto 0;
+  max-width: 400px;
+  width: 100%;
+
+  .form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+
+    select,
+    input,
+    textarea {
+      font-size: 16px;
+      line-height: 28px;
+      padding: 8px 16px;
+      width: 100%;
+      min-height: 44px;
+      border: unset;
+      border-radius: 4px;
+      outline-color: rgb(84 105 212 / 0.5);
+      background-color: rgb(255, 255, 255);
+      border: 1px solid rgb(84, 105, 212);
+    }
+    select {
+      appearance: none;
+      background: url(https://stackoverflow.com/favicon.ico) 96% / 7.5%
+        no-repeat;
+    }
+    input {
+      margin-bottom: 10px;
+    }
+    button {
+      font-size: 20px;
+      padding: 10px 20px;
+      background-color: rgb(84, 105, 212);
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
