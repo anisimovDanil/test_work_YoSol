@@ -36,19 +36,7 @@ class BidsController extends Controller
      */
     public function store(Request $request)
     {
-        /*$id = \DB::table('users')->insertGetId($request->validate([
-            'name'=>'required',
-            'email'=>'required',
-            'phone_number'=>'required'
-          ]));
-          print_r("\nnew id: " . $id . " \n");
-  
-        $reqData = DB::table('requests')->insert(
-        [
-            'req_text' => $request->req_text,
-            'recipient_id' => $request->recipient_id,
-            'sender_id' => $id
-        ]);   */
+        
     }
 
     /**

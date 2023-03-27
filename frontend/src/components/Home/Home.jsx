@@ -1,32 +1,35 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
-import UserListItem from "../UserListItem/UserListItem";
+import Table from "../Table/Table";
 import "./Home.scss";
 
 function Home() {
   const [users, setUsers] = useState([]);
 
-  const fetchAllUsers = async () => {
-    await axios.get("http://localhost:8000/api/users").then((res) => {
-      setUsers(res.data);
-    });
+  const fetchUsers = async () => {
+    const res = await fetch("http://localhost:8000/api/users");
+    const data = await res.json();
+    setUsers(data);
   };
 
   useEffect(() => {
-    fetchAllUsers();
+    fetchUsers();
   }, []);
 
   return (
     <div className='user-list'>
       <h1 className='user-title'>List users:</h1>
       <div className='user-items'>
-        <div className='thead-td'>id</div>
-        <div className='thead-td'>name</div>
-        <div className='thead-td'>email</div>
-        <div className='thead-td'>phone number</div>
+        <Table />
+      </div>
+    </div>
+  );
+}
 
+export default Home;
+
+/*
         {users.map((user, index) => (
-          <UserListItem
+          <UserItems
             key={user.id}
             id={index + 1}
             name={user.name}
@@ -34,9 +37,8 @@ function Home() {
             phone_number={user.phone_number}
           />
         ))}
-      </div>
-    </div>
-  );
-}
-
-export default Home;
+        <div className='thead-td'>id</div>
+        <div className='thead-td'>name</div>
+        <div className='thead-td'>email</div>
+        <div className='thead-td'>phone number</div>
+*/

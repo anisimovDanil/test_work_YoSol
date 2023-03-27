@@ -51,7 +51,6 @@ function Requests() {
         {currentItems.map((request, index) => (
           <UserListItem
             id={index + 1 + itemOffset}
-            //id={request.req_id}
             sender_name={request.sender_name}
             recipient_name={request.recipient_name}
             req_text={request.req_text}
