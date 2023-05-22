@@ -26,19 +26,3 @@ function Home() {
 }
 
 export default Home;
-
-/*
-        {users.map((user, index) => (
-          <UserItems
-            key={user.id}
-            id={index + 1}
-            name={user.name}
-            email={user.email}
-            phone_number={user.phone_number}
-          />
-        ))}
-        <div className='thead-td'>id</div>
-        <div className='thead-td'>name</div>
-        <div className='thead-td'>email</div>
-        <div className='thead-td'>phone number</div>
-*/
